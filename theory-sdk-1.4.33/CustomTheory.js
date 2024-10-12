@@ -6,7 +6,7 @@ import { Utils } from "./api/Utils";
 import { Upgrade } from "./api/Upgrades";
 import { game } from "./api/Game";
 import {Permissions} from "./api/Permissions";
-var permissions = Permissions.PERFORM_game_ACTIONS;
+var permissions = Permissions.PERFORM_GAME_ACTIONS;
 var optimalL1 = 
 [
     [1,0,0],
