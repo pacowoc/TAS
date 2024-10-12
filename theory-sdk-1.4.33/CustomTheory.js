@@ -9764,7 +9764,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString()+"/"+offset.toString();
+    return mode.toString()+"/"+offset.toString()+"/"+game.activeTheory.id;
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
