@@ -46,7 +46,6 @@ var tick = (elapsedTime, multiplier) => {
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
             displaytime=q;
-            game.activeTheory.upgrades[35].buy();
             mode=0;
             L1.level=0;
         }
