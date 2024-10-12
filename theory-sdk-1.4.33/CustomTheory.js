@@ -9713,6 +9713,8 @@ var offset=0;
 var L1;
 var mode=0;
 var init = () => {
+    mode=0;
+    
     currency = theory.createCurrency();
     ///////////////////
     // Regular Upgrades
