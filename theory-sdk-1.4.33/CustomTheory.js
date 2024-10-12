@@ -123,7 +123,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString()+"/"+offset.toString()+"/"+q.toString();
+    return mode.toString()+"/"+q.toString();
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
