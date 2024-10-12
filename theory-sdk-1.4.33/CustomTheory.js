@@ -9750,14 +9750,11 @@ var tick = (elapsedTime, multiplier) => {
         if(optimalL1[offset][2]>0){
             game.activeTheory.upgrades[2].buy(optimalL1[offset][2])
         }
-        if(offset==146){
-            displaytime=game.activeTheory.currencyValues[0];
-        }
         if(offset==optimalL1.length-1){
             game.activeTheory.upgrades[0].refund(-1);
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
-            displaytime=game.activeTheory.qs[0];
+            displaytime=game.activeTheory.q;
             lemma.buy();
             mode=0;
             L1.level=0;
@@ -9770,7 +9767,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString()+"/"+offset.toString()+"/"+displaytime.toString();
+    return mode.toString()+"/"+offset.toString()+"/"+game.activeTheory.q.toString();
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
