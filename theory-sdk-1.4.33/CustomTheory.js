@@ -38,18 +38,9 @@ var tick = (elapsedTime, multiplier) => {
         let c3L = game.activeTheory.upgrades[2].level;
         let cash = game.activeTheory.currencies[0].value;
         q=parseBigNumber(game.activeTheory.tertiaryEquation.substring(2))+0.1;
-        while(c1L>1){
-            cash+=10*Math.pow(1.5,c1L-2)
-            c1L--;
-        }
-        while(c2L>0){
-            cash+=30*Math.pow(3,c2L-1)
-            c2L--;
-        }
-        while(c3L>0){
-            cash+=100*Math.pow(3,c3L-1)
-            c3L--;
-        }
+        cash+=L1C1cost[c1L]
+        cash+=L1C2cost[c2L]
+        cash+=L1C3cost[c3L]
         if(cash>=1e10){
             game.activeTheory.upgrades[0].refund(-1);
             game.activeTheory.upgrades[1].refund(-1);
@@ -66,9 +57,9 @@ var tick = (elapsedTime, multiplier) => {
         maxc2L = c2L;
         maxc3L = c3L;
         maxval=value(c1L,c2L,c3L,q)
-        for(i=c1L-10;i<=c1L+10;i++){
+        for(i=max(0,c1L-10);i<=c1L+10;i++){
             for(j=0;j<=23;j++){
-                for(k=0;k<=23;k++){
+                for(k=max(0,c3L-5);k<=c3L+5;k++){
                     if(L1C1cost[i]+L1C2cost[j]+L1C3cost[k]<cash&&value(i,j,k)>maxval){
                         maxc1L = i;
                         maxc2L = j;
