@@ -56,7 +56,7 @@ int main(){
       q+=0.1;
       UpgradeDistribution M = V[0];
       for(UpgradeDistribution U:V){
-         if(U.price>totalrho*0.99999) continue;
+         if(U.price>totalrho*0.9999) continue;
          if(U.getValue(q)>M.getValue(q)){
             M = U;
          }
