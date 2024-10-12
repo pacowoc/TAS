@@ -9711,6 +9711,7 @@ var version = 1;
 var displaytime=0;
 var offset=0;
 var L1;
+var mode=0;
 var init = () => {
     currency = theory.createCurrency();
     var mode=0;
