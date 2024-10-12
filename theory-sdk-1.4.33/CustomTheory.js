@@ -9721,7 +9721,6 @@ var init = () => {
         L1.getDescription = (_) => "L1";
         L1.getInfo = (amount) => "Start L1 TAS";
         L1.bought = (amount) => {
-                L1.level=0;
                 mode=1;
                 offset=0;
         }
@@ -9754,6 +9753,7 @@ var tick = (elapsedTime, multiplier) => {
             game.activeTheory.c13.refund(-1);
             displaytime=game.activeTheory.qs[0];
             mode=0;
+            L1.level=0;
         }
         offset++;
         invalidatePrimaryEquation();
