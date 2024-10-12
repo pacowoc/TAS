@@ -9730,7 +9730,7 @@ var init = () => {
 
 var tick = (elapsedTime, multiplier) => {
     q=parseBigNumber(game.activeTheory.tertiaryEquation.substring(2))
-    offset=10*q;
+    offset=floor(10*q);
     if(game.activeTheory.id===8 && mode==1){
         if(optimalL1[offset][0]<0){
             game.activeTheory.upgrades[0].refund(-optimalL1[offset][0])
