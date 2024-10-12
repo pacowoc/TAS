@@ -9714,7 +9714,6 @@ var L1;
 var mode=0;
 var init = () => {
     currency = theory.createCurrency();
-    var mode=0;
     ///////////////////
     // Regular Upgrades
     {
