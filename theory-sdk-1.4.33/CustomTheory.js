@@ -9753,6 +9753,7 @@ var tick = (elapsedTime, multiplier) => {
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
             displaytime=game.activeTheory.qs[0];
+            lemma.buy();
             mode=0;
             L1.level=0;
         }
