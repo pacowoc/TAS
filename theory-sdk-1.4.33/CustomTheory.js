@@ -9756,6 +9756,7 @@ var tick = (elapsedTime, multiplier) => {
             mode=0;
         }
         offset++;
+        invalidatePrimaryEquation();
     }
 }
 
