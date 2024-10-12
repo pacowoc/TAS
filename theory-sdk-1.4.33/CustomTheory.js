@@ -94,7 +94,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString()
+    return mode.toString()+displaytime.toString()
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
