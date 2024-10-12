@@ -4,7 +4,7 @@ import { BigNumber } from "./api/BigNumber";
 import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 import { Upgrade } from "./api/Upgrades";
-import { game } from "./api/game";
+import { game } from "./api/Game";
 var permissions = Permissions.PERFORM_game_ACTIONS;
 var optimalL1 = 
 [
