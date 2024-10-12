@@ -60,7 +60,7 @@ var tick = (elapsedTime, multiplier) => {
         for(i=Math.max(0,c1L-10);i<=c1L+10;i++){
             for(j=0;j<=23;j++){
                 for(k=Math.max(0,c3L-5);k<=c3L+5;k++){
-                    if(L1C1cost[i]+L1C2cost[j]+L1C3cost[k]<=cash&&value(i,j,k)>=maxval){
+                    if(L1C1cost[i]+L1C2cost[j]+L1C3cost[k]<=cash&&value(i,j,k,q)>=maxval){
                         maxc1L = i;
                         maxc2L = j;
                         maxc3L = k;
