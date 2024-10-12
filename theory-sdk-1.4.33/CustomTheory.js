@@ -9731,6 +9731,7 @@ var init = () => {
 }
 
 var tick = (elapsedTime, multiplier) => {
+    q=parseBigNumber(game.activeTheory.tertiaryEquation.substring(2))
     if(game.activeTheory.id===8 && mode==1){
         if(optimalL1[offset][0]<0){
             game.activeTheory.upgrades[0].refund(-optimalL1[offset][0])
@@ -9754,7 +9755,7 @@ var tick = (elapsedTime, multiplier) => {
             game.activeTheory.upgrades[0].refund(-1);
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
-            displaytime=game.activeTheory.qs[0];
+            displaytime=q;
             lemma.buy();
             mode=0;
             L1.level=0;
@@ -9767,7 +9768,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString()+"/"+offset.toString()+"/"+game.activeTheory.qs[0].toString();
+    return mode.toString()+"/"+offset.toString()+"/"+q.toString();
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
