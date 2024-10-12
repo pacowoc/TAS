@@ -9713,7 +9713,6 @@ var offset=0;
 var L1;
 var mode=0;
 var init = () => {
-    mode=0;
     
     currency = theory.createCurrency();
     ///////////////////
@@ -9723,8 +9722,8 @@ var init = () => {
         L1.getDescription = (_) => "L1";
         L1.getInfo = (amount) => "Start L1 TAS";
         L1.bought = (amount) => {
-                mode=1;
-                offset=0;
+            mode=1;
+            offset=0;
         }
     }
 }
@@ -9758,8 +9757,9 @@ var tick = (elapsedTime, multiplier) => {
             L1.level=0;
         }
         offset++;
-        invalidatePrimaryEquation();
+        
     }
+    invalidatePrimaryEquation();
 }
 
 var getPrimaryEquation = () => {
