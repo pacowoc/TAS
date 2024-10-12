@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://schema.picoe.ca/eto.forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:TheorySDK;assembly=TheorySDK"
+      xmlns:views="clr-namespace:TheorySDK.Views;assembly=TheorySDK"
+      Title="Exponential Idle - Theory SDK"
+      MinimumSize="400,200"
+      Size="1200,450"
+      Padding="10"
+      BackgroundColor="#222">
+  <TableLayout Spacing="5, 5">
+    <TableRow>
+      <TableCell ScaleWidth="True">
+        <StackLayout HorizontalContentAlignment="Stretch">
+          <TableLayout Spacing="5,5" Padding="0,0,0,5">
+            <TableRow>
+              <TableCell>
+                <Label Text="IP Address: " TextColor="White" TextAlignment="Right" VerticalAlignment="Center" />
+              </TableCell>
+              <TableCell ScaleWidth="True">
+                <ComboBox x:Name="IpComboBox" ReadOnly="True" SelectedIndexChanged="OnIpChanged" />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Label Text="Port: " TextColor="White" TextAlignment="Right" VerticalAlignment="Center" />
+              </TableCell>
+              <TableCell>
+                <TextBox x:Name="Port" TextChanging="OnPortTextChanging" BackgroundColor="#333" TextColor="White" ShowBorder="False" />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Label Text="Theory Path: " TextColor="White" TextAlignment="Right" VerticalAlignment="Center" />
+              </TableCell>
+              <TableCell>
+                <StackLayout Orientation="Horizontal">
+                  <StackLayoutItem Expand="True">
+                    <TextBox x:Name="TheoryPath" ReadOnly="True" BackgroundColor="#333" TextColor="White" ShowBorder="False" MouseUp="OnTheoryPathClicked" />
+                  </StackLayoutItem>
+                </StackLayout>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Label Text="Server Status: " TextColor="White" TextAlignment="Right" VerticalAlignment="Center"/>
+              </TableCell>
+              <TableCell>
+                <Label x:Name="ServerStatus" TextColor="White" VerticalAlignment="Center" />
+              </TableCell>
+            </TableRow>
+          </TableLayout>
+          <StackLayoutItem Expand="True">
+            <TextArea x:Name="Log" Text="" BackgroundColor="#333" TextColor="White" ReadOnly="True" />
+          </StackLayoutItem>
+          <Label x:Name="CommandLineSpacer" Height="5" Visible="False" />
+          <StackLayoutItem>
+            <StackLayout x:Name="CommandLineLayout" Visible="False" Orientation="Horizontal">
+              <StackLayoutItem Expand="True">
+                <TextBox x:Name="CommandLine" GotFocus="OnCommandLineGotFocus" LostFocus="OnCommandLineLostFocus" KeyDown="OnCommandLineKeyDown" />
+              </StackLayoutItem>
+              <Label Width="5" />
+              <StackLayoutItem VerticalAlignment="Center">
+                <StackLayout MouseUp="ShowCommandLineInstructions">
+                  <ImageView x:Name="QuestionImage" Width="16" Height="16" />
+                </StackLayout>
+              </StackLayoutItem>
+            </StackLayout>
+          </StackLayoutItem>
+        </StackLayout>
+      </TableCell>
+      <TableCell>
+        <!-- Separator -->
+        <Label Text="" BackgroundColor="#444" Width="2" />
+      </TableCell>
+      <TableCell ScaleWidth="True">
+        <views:ScriptPanel x:Name="ScriptPanel"></views:ScriptPanel>
+      </TableCell>
+    </TableRow>
+  </TableLayout>
+</Form>

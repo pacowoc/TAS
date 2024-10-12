@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "X2VjbM2jH1XixU7pNtLh8GCG3AmgR5fIaQJhcfC5YVaYlchOCHcwKxF6E5aFjPtPO6QfJNEcS5n2hhu2IrTtsA==",
+  "success": true,
+  "projectFilePath": "/home/rick/Projects/EI/TAS/l1/theory-sdk-1.4.33/sdk/TheorySDK/TheorySDK.csproj",
+  "expectedPackageFiles": [
+    "/home/rick/.nuget/packages/esprima/2.0.4/esprima.2.0.4.nupkg.sha512",
+    "/home/rick/.nuget/packages/eto.forms/2.6.0/eto.forms.2.6.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/eto.serialization.xaml/2.6.0/eto.serialization.xaml.2.6.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/jint/3.0.0-beta-2037/jint.3.0.0-beta-2037.nupkg.sha512",
+    "/home/rick/.nuget/packages/portable.xaml/0.26.0/portable.xaml.0.26.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/home/rick/.nuget/packages/system.text.json/6.0.1/system.text.json.6.0.1.nupkg.sha512",
+    "/home/rick/.nuget/packages/microsoft.netcore.app.ref/6.0.33/microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
+    "/home/rick/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.33/microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 6.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dialog xmlns="http://schema.picoe.ca/eto.forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TheorySDK.Views;assembly=TheorySDK"
+        Title="Confirmation"
+        BackgroundColor="#222"
+        Padding="10,10,10,0">
+    <StackLayout Spacing="10">
+      <Label x:Name="MessageLabel" TextColor="White" TextAlignment="Center" />
+    <StackLayoutItem HorizontalAlignment="Stretch">
+      <StackLayout Orientation="Horizontal" Spacing="5">
+        <StackLayoutItem Expand="True">
+          <Button x:Name="YesButton" Text="Yes" Click="OnYesClicked" />
+        </StackLayoutItem>
+        <StackLayoutItem Expand="True">
+          <Button x:Name="NoButton" Text="No" Click="OnNoClicked" />
+        </StackLayoutItem>
+      </StackLayout>
+    </StackLayoutItem>
+    </StackLayout>
+</Dialog>

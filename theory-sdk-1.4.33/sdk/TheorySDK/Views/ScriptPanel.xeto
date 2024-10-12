@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Panel xmlns="http://schema.picoe.ca/eto.forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:local="clr-namespace:TheorySDK;assembly=TheorySDK"
+       BackgroundColor="Transparent">
+  <TableLayout Spacing="5,5">
+    <TableRow>
+      <!-- Left Panel -->
+      <TableCell>
+        <StackLayout x:Name="LeftLayout" HorizontalContentAlignment="Stretch" Spacing="5">
+          <StackLayoutItem HorizontalAlignment="Center">
+            <StackLayout x:Name="LocalScriptLabel" Orientation="Horizontal" Spacing="5" MouseUp="ShowInstructions">
+              <StackLayoutItem VerticalAlignment="Center">
+                <Label Text="Local Scripts" TextColor="White"/>
+              </StackLayoutItem>
+              <StackLayoutItem VerticalAlignment="Center">
+                <ImageView x:Name="QuestionImage" Width="16" Height="16" />
+              </StackLayoutItem>
+            </StackLayout>
+          </StackLayoutItem>
+          <!-- New/Remove Buttons -->
+          <TableLayout Spacing="5,0">
+            <TableRow>
+              <TableCell ScaleWidth="True">
+                <Button x:Name="AddScriptButton" Text="Add" Click="OnAddClicked" />
+              </TableCell>
+              <TableCell ScaleWidth="True">
+                <Button x:Name="RemoveScriptButton" Text="Remove" Click="OnRemoveClicked" />
+              </TableCell>
+            </TableRow>
+          </TableLayout>
+          <!-- Execute/Cancel Buttons -->
+          <StackLayout HorizontalContentAlignment="Stretch" Spacing="0">
+            <Button x:Name="ExecuteScriptButton" Text="Execute Script" Click="OnExecuteScriptClicked" />
+            <Button x:Name="CancelScriptButton" Text="Cancel" Click="OnCancelScriptClicked" Visible="False" />
+          </StackLayout>
+          <!-- Script List -->
+          <StackLayoutItem Expand="True">
+            <ListBox x:Name="ScriptList" KeyDown="OnScriptListKeyDown" MouseDoubleClick="OnScriptListDoubleClick" SelectedIndexChanged="OnScriptSelectionChanged"/>
+          </StackLayoutItem>
+        </StackLayout>
+      </TableCell>
+      <!-- Right panel -->
+      <TableCell ScaleWidth="True">
+        <StackLayout Spacing="5" HorizontalContentAlignment="Stretch" Padding="0,0,5,0">
+          <!-- Script Name -->
+          <TextBox x:Name="ScriptName" KeyDown="OnScriptNameKeyDown" TextChanging="OnScriptNameChanging" ReadOnly="True"/>
+          <!-- Script Code -->
+          <StackLayoutItem Expand="True">
+            <TextArea x:Name="ScriptCode" Text="" TextChanged="OnScriptCodeChanged" KeyDown="OnScriptCodeKeyDown" ReadOnly="True"/>
+          </StackLayoutItem>
+        </StackLayout>
+      </TableCell>
+    </TableRow>
+  </TableLayout>
+</Panel>
