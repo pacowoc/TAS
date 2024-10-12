@@ -5,6 +5,7 @@ import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 import { Upgrade } from "./api/Upgrades";
 import { Game } from "./api/Game";
+var permissions = Permissions.PERFORM_GAME_ACTIONS;
 var optimalL1 = 
 [
     [1,0,0],
