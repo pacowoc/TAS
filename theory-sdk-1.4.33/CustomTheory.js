@@ -57,9 +57,9 @@ var tick = (elapsedTime, multiplier) => {
         maxc2L = c2L;
         maxc3L = c3L;
         maxval=value(c1L,c2L,c3L,q)
-        for(i=max(0,c1L-10);i<=c1L+10;i++){
+        for(i=Math.max(0,c1L-10);i<=c1L+10;i++){
             for(j=0;j<=23;j++){
-                for(k=max(0,c3L-5);k<=c3L+5;k++){
+                for(k=Math.max(0,c3L-5);k<=c3L+5;k++){
                     if(L1C1cost[i]+L1C2cost[j]+L1C3cost[k]<cash&&value(i,j,k)>maxval){
                         maxc1L = i;
                         maxc2L = j;
