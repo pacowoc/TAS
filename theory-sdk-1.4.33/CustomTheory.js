@@ -9748,7 +9748,7 @@ var tick = (elapsedTime, multiplier) => {
         if(optimalL1[offset][2]>0){
             game.activeTheory.upgrades[2].buy(optimalL1[offset][2])
         }
-        if(offset==optimalL1.length()-1){
+        if(offset==optimalL1.length-1){
             game.activeTheory.upgrades[0].refund(-1);
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
