@@ -4,7 +4,7 @@ import { BigNumber } from "./api/BigNumber";
 import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 import { Upgrade } from "./api/Upgrades";
-import { Game } from "./api/Theory";
+import { Game } from "./api/Game";
 var optimalL1 = 
 [
     [1,0,0],
