@@ -9711,7 +9711,6 @@ var description = "TA for speedruns";
 var authors = "pacowoc & My beloved c++ code";
 var version = 1;
 var displaytime=0;
-var offset=0;
 var L1;
 var mode=0;
 var init = () => {
@@ -9725,7 +9724,6 @@ var init = () => {
         L1.getInfo = (amount) => "Start L1 TAS";
         L1.bought = (amount) => {
             mode=1;
-            offset=0;
         }
     }
 }
