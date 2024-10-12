@@ -9731,27 +9731,27 @@ var init = () => {
 var tick = (elapsedTime, multiplier) => {
     if(game.activeTheory.id===8 && mode==1){
         if(optimalL1[offset][0]<0){
-            game.activeTheory.c11.refund(-optimalL1[offset][0])
+            game.activeTheory.upgrades[0].refund(-optimalL1[offset][0])
         }
         if(optimalL1[offset][0]>0){
-            game.activeTheory.c11.buy(optimalL1[offset][0])
+            game.activeTheory.upgrades[0].buy(optimalL1[offset][0])
         }
         if(optimalL1[offset][1]<0){
-            game.activeTheory.c12.refund(-optimalL1[offset][1])
+            game.activeTheory.upgrades[1].refund(-optimalL1[offset][1])
         }
         if(optimalL1[offset][1]>0){
-            game.activeTheory.c12.buy(optimalL1[offset][1])
+            game.activeTheory.upgrades[1].buy(optimalL1[offset][1])
         }
         if(optimalL1[offset][2]<0){
-            game.activeTheory.c13.refund(-optimalL1[offset][2])
+            game.activeTheory.upgrades[2].refund(-optimalL1[offset][2])
         }
         if(optimalL1[offset][2]>0){
-            game.activeTheory.c13.buy(optimalL1[offset][2])
+            game.activeTheory.upgrades[2].buy(optimalL1[offset][2])
         }
         if(offset==optimalL1.length()-1){
-            game.activeTheory.c11.refund(-1);
-            game.activeTheory.c12.refund(-1);
-            game.activeTheory.c13.refund(-1);
+            game.activeTheory.upgrades[0].refund(-1);
+            game.activeTheory.upgrades[1].refund(-1);
+            game.activeTheory.upgrades[2].refund(-1);
             displaytime=game.activeTheory.qs[0];
             mode=0;
             L1.level=0;
