@@ -4,8 +4,8 @@ import { BigNumber } from "./api/BigNumber";
 import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 import { Upgrade } from "./api/Upgrades";
-import { Game } from "./api/Game";
-var permissions = Permissions.PERFORM_GAME_ACTIONS;
+import { game } from "./api/game";
+var permissions = Permissions.PERFORM_game_ACTIONS;
 var optimalL1 = 
 [
     [1,0,0],
@@ -9736,30 +9736,30 @@ var init = () => {
 }
 
 var tick = (elapsedTime, multiplier) => {
-    if(Game.activeTheory.id==9 && mode==1){
+    if(game.activeTheory.id==9 && mode==1){
         if(optimalL1[offset][0]<0){
-            Game.activeTheory.c11.refund(-optimalL1[offset][0])
+            game.activeTheory.c11.refund(-optimalL1[offset][0])
         }
         if(optimalL1[offset][0]>0){
-            Game.activeTheory.c11.buy(optimalL1[offset][0])
+            game.activeTheory.c11.buy(optimalL1[offset][0])
         }
         if(optimalL1[offset][1]<0){
-            Game.activeTheory.c12.refund(-optimalL1[offset][1])
+            game.activeTheory.c12.refund(-optimalL1[offset][1])
         }
         if(optimalL1[offset][1]>0){
-            Game.activeTheory.c12.buy(optimalL1[offset][1])
+            game.activeTheory.c12.buy(optimalL1[offset][1])
         }
         if(optimalL1[offset][2]<0){
-            Game.activeTheory.c13.refund(-optimalL1[offset][2])
+            game.activeTheory.c13.refund(-optimalL1[offset][2])
         }
         if(optimalL1[offset][2]>0){
-            Game.activeTheory.c13.buy(optimalL1[offset][2])
+            game.activeTheory.c13.buy(optimalL1[offset][2])
         }
         if(offset==optimalL1.length()-1){
-            Game.activeTheory.c11.refund(-1);
-            Game.activeTheory.c12.refund(-1);
-            Game.activeTheory.c13.refund(-1);
-            displaytime=Game.activeTheory.qs[0];
+            game.activeTheory.c11.refund(-1);
+            game.activeTheory.c12.refund(-1);
+            game.activeTheory.c13.refund(-1);
+            displaytime=game.activeTheory.qs[0];
             mode=0;
         }
         offset++;
