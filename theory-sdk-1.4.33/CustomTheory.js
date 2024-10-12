@@ -36,7 +36,7 @@ var tick = (elapsedTime, multiplier) => {
         let c1L = game.activeTheory.upgrades[0].level;
         let c2L = game.activeTheory.upgrades[1].level;
         let c3L = game.activeTheory.upgrades[2].level;
-        let cash = game.activeTheory.currency.value;
+        let cash = game.activeTheory.currencies[0].value;
         q=parseBigNumber(game.activeTheory.tertiaryEquation.substring(2))+0.1;
         while(c1L>1){
             cash+=10*Math.pow(1.5,c1L-2)
