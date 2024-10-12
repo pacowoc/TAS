@@ -9732,6 +9732,7 @@ var init = () => {
 
 var tick = (elapsedTime, multiplier) => {
     q=parseBigNumber(game.activeTheory.tertiaryEquation.substring(2))
+    offset=10*q;
     if(game.activeTheory.id===8 && mode==1){
         if(optimalL1[offset][0]<0){
             game.activeTheory.upgrades[0].refund(-optimalL1[offset][0])
@@ -9751,12 +9752,12 @@ var tick = (elapsedTime, multiplier) => {
         if(optimalL1[offset][2]>0){
             game.activeTheory.upgrades[2].buy(optimalL1[offset][2])
         }
-        if(offset==146){
+        if(10*q>optimalL1.length){
             game.activeTheory.upgrades[0].refund(-1);
             game.activeTheory.upgrades[1].refund(-1);
             game.activeTheory.upgrades[2].refund(-1);
             displaytime=q;
-            lemma.buy();
+            game.activeTheory.lemma.buy();
             mode=0;
             L1.level=0;
         }
