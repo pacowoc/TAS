@@ -50,9 +50,6 @@ var tick = (elapsedTime, multiplier) => {
             mode=0;
             L1.level=0;
         }
-        c1L = game.activeTheory.upgrades[0].level;
-        c2L = game.activeTheory.upgrades[1].level;
-        c3L = game.activeTheory.upgrades[2].level;
         maxc1L = c1L;
         maxc2L = c2L;
         maxc3L = c3L;
