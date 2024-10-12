@@ -58,6 +58,7 @@ var init = () => {
 }
 
 var tick = (elapsedTime, multiplier) => {
+    q=0;
     if(game.activeTheory.id===8 && mode==1){
         let c1L = game.activeTheory.upgrades[0].level;
         let c2L = game.activeTheory.upgrades[1].level;
