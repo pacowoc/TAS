@@ -9732,9 +9732,6 @@ var init = () => {
                 offset=0;
         }
     }
-    
-
-    updateAvailability();
 }
 
 var tick = (elapsedTime, multiplier) => {
