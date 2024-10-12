@@ -9708,13 +9708,12 @@ var name = "Lemma TAS CT";
 var description = "TA for speedruns";
 var authors = "pacowoc & My beloved c++ code";
 var version = 1;
-var mode=0;
 var displaytime=0;
 var offset=0;
 var L1;
 var init = () => {
     currency = theory.createCurrency();
-
+    var mode=0;
     ///////////////////
     // Regular Upgrades
     {
@@ -9762,7 +9761,7 @@ var tick = (elapsedTime, multiplier) => {
 
 var getPrimaryEquation = () => {
 
-    return mode.toString();
+    return mode.toString()+"/"+offset.toString();
 }
 var getPublicationMultiplier = (tau) => 1;
 var getPublicationMultiplierFormula = (symbol) => 1;
