@@ -63,7 +63,7 @@ var tick = (elapsedTime, multiplier) => {
                     if(L1C1cost[i]+L1C2cost[j]+L1C3cost[k]<=cash&&value(i,j,k,q)>=maxval){
                         maxc1L = i;
                         maxc2L = j;
-                        maxc3L = k;
+                        maxc3L = k; 
                         maxval=value(i,j,k,q)
                     }
                 }
