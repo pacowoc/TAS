@@ -88,10 +88,8 @@ var tick = (elapsedTime, multiplier) => {
         }
         let M = V[0];
         V.forEach(U => {
-            if(U.cost<=cash){
-                if(U.getValue(q)>M.getValue(q)){
-                    M=U;
-                }
+            if(U.cost<=cash&&U.cost>cash/1e4&&U.getValue(q)>M.getValue(q)){
+                M=U;
             } 
         });
         c1L = game.activeTheory.upgrades[0].level;
