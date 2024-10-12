@@ -1,11 +1,4 @@
-﻿import { ExponentialCost, FreeCost, LinearCost } from "./api/Costs";
-import { Localization } from "./api/Localization";
-import { BigNumber } from "./api/BigNumber";
-import { theory } from "./api/Theory";
-import { Utils } from "./api/Utils";
-import { Upgrade } from "./api/Upgrades";
-import { game } from "./api/Game";
-import {Permissions} from "./api/Permissions";
+﻿
 var permissions = Permissions.PERFORM_GAME_ACTIONS;
 var optimalL1 = 
 [
