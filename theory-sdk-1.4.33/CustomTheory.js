@@ -70,22 +70,22 @@ var tick = (elapsedTime, multiplier) => {
             }
         }
         if(maxc1L<c1L){
-            game.activeTheory.c11.refund(c1L-maxc1L)
+            game.activeTheory.upgrades[0].refund(c1L-maxc1L)
         }
         if(maxc1L>c1L){
-            game.activeTheory.c11.buy(maxc1L-c1L)
+            game.activeTheory.upgrades[0].buy(maxc1L-c1L)
         }
         if(maxc2L<c2L){
-            game.activeTheory.c12.refund(c2L-maxc2L)
+            game.activeTheory.upgrades[1].refund(c2L-maxc2L)
         }
         if(maxc2L>c2L){
-            game.activeTheory.c12.buy(maxc2L-c2L)
+            game.activeTheory.upgrades[1].buy(maxc2L-c2L)
         }
         if(maxc3L<c3L){
-            game.activeTheory.c13.refund(c3L-maxc3L)
+            game.activeTheory.upgrades[2].refund(c3L-maxc3L)
         }
         if(maxc3L>c3L){
-            game.activeTheory.c13.buy(maxc3L-c3L)
+            game.activeTheory.upgrades[2].buy(maxc3L-c3L)
         }
         
     }
