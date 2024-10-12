@@ -9759,7 +9759,7 @@ var tick = (elapsedTime, multiplier) => {
         offset++;
         
     }
-    invalidatePrimaryEquation();
+    theory.invalidatePrimaryEquation();
 }
 
 var getPrimaryEquation = () => {
