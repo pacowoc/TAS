@@ -9729,7 +9729,7 @@ var init = () => {
 }
 
 var tick = (elapsedTime, multiplier) => {
-    if(game.activeTheory.id=="convergence_test" && mode==1){
+    if(game.activeTheory.id===9 && mode==1){
         if(optimalL1[offset][0]<0){
             game.activeTheory.c11.refund(-optimalL1[offset][0])
         }
